@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --lilas: #8B32F4;
+    --magenta: #5320A6;
+    --neve: #F3F3F3;
+    --cinza: #0E0D0D;
+    
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--neve);
+
+    font-family: "Outfit", sans-serif;
+}
+
+/* ==============NAV============= */ 
+
+nav{
+    display: flex;
+    background-color: #c0b4cf;
+    height: 4.37rem;
+    width: 100%;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.luz-noturna{
+    display: flex;
+    border: 2px solid red;
+    flex: 15%;
+    margin-left: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.luz-noturna > p {
+    font-size: 25px;
+
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.select-buttom{
+    display: flex;
+    border: 2px solid rgb(253, 118, 231);
+    flex: 35%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.select-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid purple;
+    height: 3.7rem;
+    width: 6rem;
+}
+
+.perfil{
+    display: flex;
+    border: 2px solid rgb(0, 255, 242);
+    flex: 10%;
+    margin-right: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-perfil{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+/* ==============MAIN============= */ 
+
+main{
+    display: flex;
+    background-color: red;
+    height: 100%;
+    width: 52%;
+    margin-left: 23% ;
+    margin-top: 4rem;
+}
+
+/* ==============MAIN============= */ 
+
+section{
+    display: flex;
+    position: fixed;
+    background-color: blue;
+    height: 4.37rem;
+    width: 21.8rem;
+    right: 1rem;
+    bottom: 0px;
+    align-items: center;
+}
+
+section > p{
+    color: var(--neve);
+}
+
+
+
+
+
+/* ---- CHECK BOX ---- */
+.container-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid plum;
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch .switch-text{
+    padding-right: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.switch .switch-wapper{
+    display: inline;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.switch .switch-wapper .switch-bottom{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: rgb(78, 78, 78);
+}
+
+.switch .switch-wapper .checkbox-box{
+    opacity: 0px;
+    height: 0px;
+    width: 0px;
+}
+
+.switch .switch-wapper .switch-bottom::before{
+    content: "";
+    background-color: white;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s all ease;
+}
+
+.switch .switch-wapper .checkbox-box:checked + .switch-bottom{
+    background-color: rgb(17, 165, 17);
+}
+
+.switch .switch-wapper .checkbox-box:checked + .switch-bottom::before{
+    transform: translateX(26px);
+}
+
+/*
+Video mostrando como faz
+https://www.youtube.com/watch?v=UNqC-LLW2mE
+*/
