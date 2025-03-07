@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root{
-    --lilas: #8B32F4;
-    --magenta: #5320A6;
     --neve: #F3F3F3;
     --cinza: #0E0D0D;
     
@@ -24,7 +22,7 @@ body{
 
 nav{
     display: flex;
-    background-color: #c0b4cf;
+    background-color: #e2e2e2da;
     height: 4.37rem;
     width: 100%;
     box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -32,7 +30,6 @@ nav{
 
 .luz-noturna{
     display: flex;
-    border: 2px solid red;
     flex: 15%;
     margin-left: 20%;
     flex-direction: row;
@@ -50,7 +47,6 @@ nav{
 
 .select-buttom{
     display: flex;
-    border: 2px solid rgb(253, 118, 231);
     flex: 35%;
     align-items: center;
     justify-content: space-around;
@@ -61,85 +57,71 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid purple;
     height: 3.7rem;
     width: 6rem;
 }
 
+.select-option > a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+    letter-spacing: 0.8px;
+
+}
+
+.select-option img{
+    height: 30px;
+    width: 30px;
+}
+
 .perfil{
     display: flex;
-    border: 2px solid rgb(0, 255, 242);
     flex: 10%;
     margin-right: 20%;
     justify-content: center;
     align-items: center;
 }
 
+.container-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid rgb(71, 71, 71);
+    border-radius: 100%;
+    height: 64px;
+    width: 68px;
+}
+
 .img-perfil{
     cursor: pointer;
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 200px;
 }
 
-/* ==============MAIN============= */ 
-
-main{
-    display: flex;
-    background-color: red;
-    height: 100%;
-    width: 52%;
-    margin-left: 23% ;
-    margin-top: 4rem;
-}
-
-/* ==============MAIN============= */ 
-
-section{
-    display: flex;
-    position: fixed;
-    background-color: blue;
-    height: 4.37rem;
-    width: 21.8rem;
-    right: 1rem;
-    bottom: 0px;
-    align-items: center;
-}
-
-section > p{
-    color: var(--neve);
-}
-
-
-
-
-
-/* ---- CHECK BOX ---- */
+/*  CHECK BOX  */
 .container-checkbox{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid plum;
 }
-
 .switch{
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-
 .switch .switch-text{
     padding-right: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: rgb(43, 43, 43);
 }
-
 .switch .switch-wapper{
     display: inline;
-    width: 60px;
+    width: 65px;
     height: 34px;
     position: relative;
+    margin-right: 0.8rem;
 }
-
 .switch .switch-wapper .switch-bottom{
     position: absolute;
     top: 0px;
@@ -152,16 +134,14 @@ section > p{
     border-radius: 40px;
     background-color: rgb(78, 78, 78);
 }
-
 .switch .switch-wapper .checkbox-box{
     opacity: 0px;
     height: 0px;
     width: 0px;
 }
-
 .switch .switch-wapper .switch-bottom::before{
     content: "";
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 26px;
     width: 26px;
     position: absolute;
@@ -170,16 +150,139 @@ section > p{
     border-radius: 50%;
     transition: .4s all ease;
 }
-
 .switch .switch-wapper .checkbox-box:checked + .switch-bottom{
-    background-color: rgb(17, 165, 17);
+    background-color: rgb(255, 255, 255);
 }
-
 .switch .switch-wapper .checkbox-box:checked + .switch-bottom::before{
-    transform: translateX(26px);
+    transform: translateX(30px);
+    background-color: rgb(78, 78, 78);
 }
 
 /*
 Video mostrando como faz
 https://www.youtube.com/watch?v=UNqC-LLW2mE
 */
+
+
+/* ==============MAIN============= */ 
+
+main{
+    display: flex;
+    background-color: red;
+    min-height: 100%;
+    width: 52%;
+    margin-left: 23% ;
+    margin-top: 4rem;
+    flex-direction: column;
+}
+
+.container-main{
+    display: flex;
+    background-color: white;
+    height: 45rem;
+    width: 80%;
+    margin: 6rem 10%;
+    border-radius: 10px;
+    border: 1px solid rgba(41, 41, 41, 0.274);
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(87, 87, 87);
+}
+
+.user-main{
+    display: flex;
+    border: 2px solid green;
+    height: 10%;
+    margin-bottom: 0.5rem;
+    justify-content:space-between;
+}
+
+.user-perfil{
+    display: flex;
+    border: 2px solid pink;
+    height: 100%;
+    width: 30%;
+    justify-content: start;
+    align-items: end;
+    flex-direction: row;
+}
+
+.user-hours{
+    display: flex;
+    border: 2px solid rgb(153, 41, 60);
+    height: 100%;
+    width: 20%;
+    justify-content: end;
+    align-items: end;
+    flex-direction: row;
+}
+
+.user-hours p {
+    font-size: 15px;
+}
+
+.photo-main{
+    border: 2px solid yellow;
+    width: 100%;
+    height: 65%;
+}
+
+.like-main{
+    display: flex;
+    border: 2px solid red;
+    width: 100%;
+    height: 12%;
+    margin-top: 2.5%;
+    flex-direction: row;
+}
+
+.liked{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.liked img {
+    height: 35px;
+    width: 35px;
+    margin-right: 0.2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.comment{
+    display: flex;
+    height: 100%;
+    width: 70%;
+    margin-left: 6rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(47, 212, 47);
+}
+
+.comment img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* ==============SECTION============= */ 
+
+section{
+    display: flex;
+    position: fixed;
+    background-color: rgb(168, 57, 57);
+    height: 3rem;
+    width: 20rem;
+    right: 1rem;
+    bottom: 0px;
+    align-items: center;
+}
+
+section > p{
+    color: var(--neve);
+    margin-left: 0.5rem;
+}
