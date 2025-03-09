@@ -2,7 +2,7 @@ const url = "https://api.thecatapi.com/v1/images/search"
 
 
 
-const botao = document.getElementById("botao")
+const botao = document.getElementById("button_main")
 
 async function chamarAPI(){
 
@@ -16,13 +16,46 @@ async function chamarAPI(){
 
 botao.addEventListener("click", async ()=>{
 
-    let novaImagem = document.createElement("img");
-    novaImagem.setAttribute("class", "teste")
+    async function create_container(){
 
 
-    const imagemUrl = await chamarAPI();    
-    novaImagem.src = imagemUrl
+        let container = document.getElementById("container_main")
+        container.classList.remove("esconder")
+        let clone = container.cloneNode(true)
+
+        document.getElementById("main").appendChild(clone)
+
+        let container_photo = clone.querySelector("#photo-main")
+        let photo = document.createElement("img")
+
+        container_photo.appendChild(photo)
+
+        photo.src = await chamarAPI()
+
+
+
+    async function create_hours(){
+
+        let hours = clone.querySelector("#user_hours")
+
+        let horas = document.createElement("p")
+        let minutos = document.createElement("p")
+
+        horas.innerHTML = Math.floor(Math.random()*23)  + ":"
+        minutos.innerHTML = Math.floor(Math.random()*60)
+
+        hours.appendChild(horas)
+        hours.appendChild(minutos)
+    }
+
+    create_hours()
+
+}
     
-    document.body.appendChild(novaImagem); 
+
+
+    for(let i = 0; i < 6; i++){
+        create_container()
+    }
 
 })

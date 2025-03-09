@@ -57,35 +57,38 @@
 
 
     <!-- ==========MAIN========== -->
-    <main>
-        <div class="container-main">
+    <main id="main">
+        <div class="container-main esconder" id="container_main">
 
             <div class="user-main">
                 <div class="user-perfil">
-                    <img src="img/heart.png">
+                    <img src="img/ghost.png" height="55px">
                     <div style="background-color: rgba(151, 151, 151, 0.123); padding-left: 0.5rem; padding-right: 0.5rem;"><p>Mark almeida</p></div>
                 </div>
 
-                <div class="user-hours">
-                    <p>00:00</p>
-                    <p>pm</p>
-                </div>
+                <div class="user-hours" id="user_hours"></div>
             </div>
 
-            <div class="photo-main"></div>
+            <div class="photo-main" id="photo-main"></div>
+
+            <div class="emote-main">
+                <img src="img/emote-1.png">
+                <img src="img/emote-2.png">
+                <img src="img/emote-3.png">
+            </div>
 
             <div class="like-main">
                 <div class="liked">
                     <img src="img/heart.png">
-                    <p>12</p>
 
                     <img src="img/like.png">
-                    <p>10</p>
                 </div>
 
                 <div class="comment"><img src="img/comment.png"></div>
             </div>
         </div>
+        
+        <button id="button_main" class="button_main" style="display: flex; height: 20px; width: 150px;">See More</button>
 
     </main>
 
