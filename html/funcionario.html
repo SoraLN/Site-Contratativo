@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- =========CSS========= -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        :root{
+            --cor1: #3C3D37;
+            --cor2: #697565;
+            --cor3: #ECDFCC;
+            --cor4: #1E201E;
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Outfit", sans-serif;
+            height: 100vh;
+        }
+        .button_iframe{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 28px;
+            width: 38px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 550;
+            border: none;
+
+            background-color: whitesmoke;
+            color: var(--cor1);
+
+            border: 1px solid var(--cor3);
+            border-right: 3px solid var(--cor3);
+            border-bottom: 3px solid var(--cor3);
+        }
+        .container_iframe{
+            display: flex;
+            align-items: center;
+            background-color: var(--cor1);
+            height: 17%;
+            width: 65%;
+            margin-top: 2rem;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+    <!-- =========HTML========= -->
+<body>
+
+    <button id="button_iframe" class="button_iframe">x</button>
+
+    <div class="container_iframe">
+        <p>a</p>
+    </div>
+
+
+    <!-- =========JS========= -->
+<script>
+
+    const botao = document.getElementById("button_iframe")
+
+    botao.addEventListener("click", ()=>{
+        const corpo = window.parent.document.getElementById("my_employee")
+        corpo.style.display = "none";
+
+        if(corpo.style.display === "none"){
+
+            const section = window.parent.document.getElementById("section_id")
+            const nav = window.parent.document.getElementById("nav_id")
+            const main = window.parent.document.getElementById("main_id")
+            let conjunto_tag = [section, nav, main]
+
+            conjunto_tag.map((x)=>{
+                x.classList.remove("iframe_background")
+            })
+
+        }
+    })
+
+
+</script>
+</body>
+</html>

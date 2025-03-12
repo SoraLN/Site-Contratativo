@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
+    <link rel="icon" type="png" href="website-icon.png">
     <title>Gerenciador</title>
 </head>
-<body>
+
+<body">
     
 
         <!-- ==========NAV========== -->
-    <nav>
+    <nav id="nav_id">
         <div class="luz-noturna">
 
             <div class="container-checkbox">
@@ -36,12 +38,12 @@
 
            <div class="select-option">
             <img src="img/note-pad.png">
-            <a href="#">MATRICULAR</a>
+            <a href="#" id="mensagem_id">MENSAGEM</a>
            </div>
 
            <div class="select-option">
             <img src="img/funcionario.png">
-            <a href="#">FUNCIONARIOS</a>
+            <a href="#" id="funcionario_id">FUNCIONARIOS</a>
            </div> 
 
            <div class="select-option">
@@ -57,12 +59,14 @@
 
 
     <!-- ==========MAIN========== -->
-    <main id="main">
+<main id="main_id">
+
+    <div id="conjunto_main">    
         <div class="container-main esconder" id="container_main">
 
             <div class="user-main">
                 <div class="user-perfil">
-                    <img src="img/ghost.png" height="55px">
+                    <img src="img/user-coach.png" height="45px">
                     <div style="background-color: rgba(151, 151, 151, 0.123); padding-left: 0.5rem; padding-right: 0.5rem;"><p>Mark almeida</p></div>
                 </div>
 
@@ -72,9 +76,14 @@
             <div class="photo-main" id="photo-main"></div>
 
             <div class="emote-main">
-                <img src="img/emote-1.png">
-                <img src="img/emote-2.png">
-                <img src="img/emote-3.png">
+                <img src="img/emote1.png" style="margin-left: 1rem; transform: rotate(350deg);">
+                <img src="img/emote2.png" style="position: relative; left: -1rem; height: 30px; width: 30px;">
+                <img src="img/emote3.png" style="position: relative; left: -1.4rem; bottom: -0.4rem; height: 35px; width: 35px; transform: rotate(30deg)">
+
+                <div class="emote-p">
+                <p style="margin-right:5px ;"></p>
+                <p>Likes</p>
+                </div>
             </div>
 
             <div class="like-main">
@@ -88,20 +97,37 @@
             </div>
         </div>
         
-        <button id="button_main" class="button_main" style="display: flex; height: 20px; width: 150px;">See More</button>
+    </div>
 
-    </main>
+        <button id="button_main" class="button_main">See More</button>
 
+</main>
 
     <!-- ==========SECTION========== -->
 
-    <section>
+    <section id="section_id">
         <div class="container-perfil" style="height: 42px; width: 43px; margin: 0.4rem;"><img src="img/icon-fake.jpg" height="70px" width="70px"></div>
         <p>Mensagens</p>
+        <img src="img/x.png" class="xis-section" id="xis_section">
     </section>
 
-<script src="js/perfil.js"></script>    
-<script src="js/cat.js"></script>    
+    <!-- ==========IFRAME========== -->
 
+    <iframe id="my_employee" src="html/funcionario.html"
+    style="
+        background-color: #1E201E;
+        width: 70%; 
+        height: 80vh;
+        z-index: 100;
+        position: fixed;
+        top: 10%;
+        border: none;
+        left: 15%;
+        display: none;">
+    </iframe>
+
+<script src="js/perfil.js"></script>    
+<script src="js/cat.js"></script>  
+<script src="js/script.js"></script>
 </body>
 </html>
