@@ -24,7 +24,6 @@ funcionario.addEventListener("click", ()=>{
         x.classList.add("iframe_background")
     })
 
-
     iframe.style.display = ""
 
 })

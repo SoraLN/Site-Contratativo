@@ -66,7 +66,7 @@
 
             <div class="user-main">
                 <div class="user-perfil">
-                    <img src="img/user-coach.png" height="45px">
+                    <img src="img/user-coach.png" height="45px" id="photo_user">
                     <div style="background-color: rgba(151, 151, 151, 0.123); padding-left: 0.5rem; padding-right: 0.5rem;"><p>Mark almeida</p></div>
                 </div>
 
@@ -76,30 +76,33 @@
             <div class="photo-main" id="photo-main"></div>
 
             <div class="emote-main">
-                <img src="img/emote1.png" style="margin-left: 1rem; transform: rotate(350deg);">
-                <img src="img/emote2.png" style="position: relative; left: -1rem; height: 30px; width: 30px;">
-                <img src="img/emote3.png" style="position: relative; left: -1.4rem; bottom: -0.4rem; height: 35px; width: 35px; transform: rotate(30deg)">
+
+                <div class="emote-container">
+                    <img src="img/emote1.png" style="transform: rotate(350deg); height: 50px;">
+                    <img src="img/emote2.png" style="height: 35px; margin-left: -20px;">
+                    <img src="img/emote3.png" style="transform: rotate(30deg); height: 40px; margin-left: -10px;">
+                </div>
 
                 <div class="emote-p">
-                <p style="margin-right:5px ;"></p>
-                <p>Likes</p>
+                    <p style="margin-right:5px;" id="curtidas"></p>
+                    <p>Likes</p>
                 </div>
             </div>
 
             <div class="like-main">
                 <div class="liked">
-                    <img src="img/heart.png">
+                    <img src="img/heart.png" id="coracao" class="coracao">
 
-                    <img src="img/like.png">
+                    <img src="img/like.png" id="gostei" class="gostei">
                 </div>
 
-                <div class="comment"><img src="img/comment.png"></div>
+                <div class="comment"><img src="img/comment.png" id="comentario_id" onclick="animacao_botao()"></div>
             </div>
         </div>
         
     </div>
 
-        <button id="button_main" class="button_main">See More</button>
+        <button id="button_main" class="button_main" style="cursor: pointer;">See More</button>
 
 </main>
 
@@ -123,6 +126,7 @@
         top: 10%;
         border: none;
         left: 15%;
+        border-radius: 1px;
         display: none;">
     </iframe>
 

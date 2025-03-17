@@ -14,6 +14,7 @@ async function chamarAPI(){
 
 botao.addEventListener("click", async ()=>{
 
+
     async function create() {
         async function create_container(){
 
@@ -30,9 +31,7 @@ botao.addEventListener("click", async ()=>{
     
             photo.src = await chamarAPI()
     
-    
-    
-        async function create_hours(){
+        async function create_peripecias(){
     
             let hours = clone.querySelector("#user_hours")
     
@@ -45,21 +44,83 @@ botao.addEventListener("click", async ()=>{
     
             hours.appendChild(horas)
             hours.appendChild(minutos)
+
         }
-        create_hours()
+         create_peripecias()
     }
-    create_container()
+     create_container()
 }
 
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < 8; i++){
         await create()
+
+        const curtidas = document.getElementById("curtidas")
+        curtidas.innerHTML = Math.floor(Math.random()*9999)
+
+        if(curtidas.innerHTML == 0 || curtidas.innerHTML == null){
+            curtidas.innerHTML = 3453
+        }
+
+        let contador = Math.floor(Math.random()*11)
+        const photo_user = document.getElementById("photo_user");
+
+        switch (contador){
+            case 1:
+                photo_user.src = "img/user-chef.png"
+            break;
+            
+            case 2:
+                photo_user.src = "img/user-coach.png"
+            break;
+                
+            case 3:
+                photo_user.src = "img/user-cowboy.png"
+            break;
+                    
+            case 4:
+                photo_user.src = "img/user-crown.png"
+            break;
+        
+            case 5:
+                photo_user.src = "img/user-driver-man.png"
+            break;
+            
+            case 6:
+                photo_user.src = "img/user-helmet-safety.png"
+            break;
+                
+            case 7:
+                photo_user.src = "img/user-md.png"
+            break;
+                
+            case 8:
+                photo_user.src = "img/user-nurse.png"
+            break;
+
+            case 9:
+                photo_user.src = "img/user-pizza-delivery.png"
+            break;
+
+            case 10:
+                photo_user.src = "img/user-scientist.png"
+            break;
+
+            case 11:
+                photo_user.src = "img/user-visor.png"
+            break;
+        }
     }
 
     botao.classList.remove("button_main")
     botao.classList.add("button_main_2")
 
+    const teste = document.getElementById("conjunto_main")
+    teste.firstElementChild.classList.add("esconder")
+    
+
 })
 
+
 //Excluir o first child quando clicar no botao, para escluir a primeira pagina
-//Colocar comentarios e like aleatorios
 //Colocar perfil randowm
+//Colocar o botao para mudar de cor nos emotes
