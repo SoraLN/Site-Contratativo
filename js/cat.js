@@ -8,9 +8,8 @@ async function chamarAPI(){
 
     const obj = await resp.json()
 
-    console.log(obj)
-
     return obj[0].url
+
 }
 
 botao.addEventListener("click", async ()=>{
@@ -26,20 +25,11 @@ botao.addEventListener("click", async ()=>{
             document.getElementById("conjunto_main").appendChild(clone)
     
             let container_photo = clone.querySelector("#photo-main")
-            let container_photo_main = clone.querySelector("#photo_main")
-
             let photo = document.createElement("img")
     
-            container_photo.appendChild(container_photo_main)
-            container_photo_main.appendChild(photo)
-
-            container_photo.classList.add("desfoco")
-
-            const new_photo = await chamarAPI()
-
-            container_photo.style.backgroundImage = `url(${new_photo})`
-
-            photo.src = new_photo  
+            container_photo.appendChild(photo)
+    
+            photo.src = await chamarAPI()
     
         async function create_peripecias(){
     
@@ -57,21 +47,6 @@ botao.addEventListener("click", async ()=>{
 
         }
          create_peripecias()
-
-        fetch('https://randomuser.me/api/')
-            .then(response => response.json())
-            .then(data => {
-
-                const firstName = data.results[0].name.first;
-                const lastName = data.results[0].name.last;
-
-                let name = clone.querySelector("#nome");
-                name.innerHTML = `${firstName} ${lastName}`;
-            })
-            .catch(error => {
-                console.error('Erro ao pegar o nome:', error);
-            });
-
     }
      create_container()
 }
@@ -142,7 +117,10 @@ botao.addEventListener("click", async ()=>{
     const teste = document.getElementById("conjunto_main")
     teste.firstElementChild.classList.add("esconder")
     
+
 })
 
+
+//Excluir o first child quando clicar no botao, para escluir a primeira pagina
 //Colocar perfil randowm
 //Colocar o botao para mudar de cor nos emotes
