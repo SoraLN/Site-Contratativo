@@ -227,11 +227,11 @@ main{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-size: cover;
 }
 
-.photo-main img{
-    height: 100%;
-    width: 100%;
+.photo-main-2 img{
+    filter: none;
 }
 
 .emote-main{
@@ -393,6 +393,11 @@ section .xis-section{
 .esconder{
     display: none;
 }
+
 .espacamento_minutos{
     margin-right: 1rem;
+}
+
+.desfoco{
+    filter: blur(4px);
 }

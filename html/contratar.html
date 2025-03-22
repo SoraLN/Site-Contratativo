@@ -4,10 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/contratar.css">
-    <link rel="icon" type="png" href="website-icon.png">
+    <link rel="icon" type="png" href="../website-icon.png">
     <title>Gerenciador</title>
 </head>
 <body>
-    
+
+            <!-- ==========NAV========== -->
+
+            <nav id="nav_id">
+                <div class="luz-noturna">
+        
+                    <div class="container-checkbox">
+                        <label class="switch">
+                        
+                            <div class="switch-wapper">
+                                <input type="checkbox" class="checkbox-box" name="watch"> 
+                                <span class="switch-bottom"></span>
+                            </div>
+        
+                            <span class="switch-text"> LUZ NOTURNA</span>
+                
+                        </label>
+                    </div>
+        
+                </div>
+        
+                <div class="select-buttom">
+                   <div class="select-option">
+                    <img src="../img/home.png">
+                    <a href="../index.html">HOME</a>
+                   </div>
+        
+                   <div class="select-option">
+                    <img src="../img/note-pad.png">
+                    <a href="#" id="mensagem_id">MENSAGEM</a>
+                   </div>
+        
+                   <div class="select-option">
+                    <img src="../img/funcionario.png">
+                    <a href="#" id="funcionario_id">FUNCIONARIOS</a>
+                   </div> 
+        
+                   <div class="select-option">
+                    <img src="../img/contratar.png">
+                    <a href="contratar.html">CONTRATAR</a>
+                   </div> 
+                </div>
+        
+                <div class="perfil">
+                    <div class="container-perfil"><img src="../img/icon-fake.jpg" class="img-perfil"></div>
+                </div>
+            </nav>
+
+            <!-- ==========MAIN========== -->
+
+             <main>
+                <div class="container">
+                    <div class="parte-esquerdo">
+                        <div class="container-photo"><img src="../img/icon-fake.jpg"></div>
+
+                        <div class="botao"><button>CONTRATAR</button></div>
+                    </div>
+
+                    <div class="parte-centro">
+
+                    </div>
+
+                    <div class="parte-direito">
+
+                    </div>
+                </div>
+             </main>
+
+            <!-- ==========SECTION========== -->
+
+            <section id="section_id">
+
+                <div class="container-perfil" style="height: 42px; width: 43px; margin: 0.4rem;"><img src="../img/icon-fake.jpg" height="70px" width="70px"></div>
+                <p>Mensagens</p>
+                <img src="../img/x.png" class="xis-section" id="xis_section">
+
+            </section>
+
+            <!-- ==========IFRAME========== -->
+
+    <iframe id="my_employee" src="funcionario.html"
+    style="
+        background-color: #1E201E;
+        width: 70%; 
+        height: 80vh;
+        z-index: 100;
+        position: fixed;
+        top: 10%;
+        border: none;
+        left: 15%;
+        border-radius: 1px;
+        display: none;">
+    </iframe>
+
+<script>
+
+    const section = document.getElementById('section_id');
+    const xis = document.getElementById('xis_section');
+    const msg = document.getElementById('mensagem_id');
+
+    msg.addEventListener('click', () => {
+        section.classList.add("aparecer")
+    });
+
+    xis.addEventListener('click', () => {
+        section.classList.remove("aparecer")
+    });
+</script>
+<script src="../js/script.js"></script>
+<script src="../js/perfil.js"></script>
 </body>
 </html>
