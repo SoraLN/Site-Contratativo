@@ -173,7 +173,7 @@ https://www.youtube.com/watch?v=UNqC-LLW2mE
 
 main{
     display: flex;
-    background-color: rgb(173, 173, 173);
+    background-color: #ececec;
     min-height: 100%;
     width: 80%;
     margin-left: 10%;
@@ -189,12 +189,13 @@ main{
     height: 20rem;
     width: 80%;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 /* --PARTE ESQUERDA-- */
 .parte-esquerdo{
     display: flex;
     flex: 20%;
-    border: 2px solid red;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -204,7 +205,7 @@ main{
 
 .container-photo{
     display: flex;
-    border: 2px solid rgb(152, 133, 255);
+    border: 2px solid rgba(255, 255, 255, 0.027);
     border-radius: 100%;
     height: 130px;  
     width: 130px;
@@ -226,12 +227,13 @@ main{
             background-color:#292c29;
             color: var(--neve);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-weight: 500;
+            font-weight: 600;
             border: 1px solid var(--cor1);
             border-bottom: 6px solid var(--cor1);
             border-right: 6px solid var(--cor1);
 
             transition: all 1s ease;
+            cursor: pointer;
         }
         .botao button:hover{
             transition: scale(1s);
@@ -257,17 +259,60 @@ main{
 
 /* --PARTE CENTRAL-- */
 .parte-centro{
-    flex: 60%;
-    border: 2px solid yellow;
-    height: 100%;
+    display: flex;
+    flex: 80%;
+    height: 80%;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* --PARTE DIREITO-- */
-.parte-direito{
-    flex: 20%;
-    border: 2px solid rgb(87, 128, 26);
-    height: 100%;
+.container-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    margin-left: 1.3rem ;
+
+    height: 70px;
+    padding: 0px 3.5rem;
+    background-color: #837b70;
+    border-radius: 5px;
 }
+
+.container-info p{
+    font-size: 2.2rem;
+    color: var(--cor2);
+    font-weight: 500;
+}
+
+.container-info-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    background-color: var(--cor4);
+    padding: 0px 1rem;
+    height: 3rem;
+    border-radius: 5px;
+    margin-left: 1.5rem ;
+}
+
+.container-info-2 label{
+    font-size: 1.3rem;
+    color: var(--cor2);
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.container-info-2 p{
+    font-size: 1.3rem;
+    color: var(--cor2);
+    font-weight: 500;
+}
+
 /* ==============SECTION============= */ 
 
 section{
